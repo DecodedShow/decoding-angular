@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="blog-app" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular: Controller As Syntax</title>
+</head>
+<body ng-controller="blogCtrl as blog">
+<h1>{{blog.title}}</h1>
+<p>{{blog.description}}</p>
+<div class="article" ng-repeat="article in blog.articles">
+    <h2>{{article.title}}</h2>
+    <p>{{article.description}}</p>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+<script>
+    angular.module('blog-app', [])
+            .controller('blogCtrl', BlogCtrl);
+
+    function BlogCtrl () {
+        var vm = this;
+        vm.title = 'Blog Title';
+        vm.description = 'about this blog';
+        vm.articles = [
+            {title:'title 1', description: 'description 1'},
+            {title:'title 2', description: 'description 2'},
+            {title:'title 3', description: 'description 3'},
+            {title:'title 4', description: 'description 4'}
+        ];
+    }
+
+</script>
+</body>
+</html>

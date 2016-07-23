@@ -1,0 +1,29 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    width:80%;
+    margin: 10% auto;
+}
+.loan-list {
+    list-style: none;
+    padding: 0;
+}
+.loan-list li {
+    display: inline-block;
+    margin:20px;
+}
+.loan-list dt {
+    float: left;
+    clear: left;
+    width: 106px;
+    text-align: left;
+    font-weight: bold;
+    color: red;
+}
+.loan-list dt:after {
+    content: ":";
+}
+.loan-list dd {
+    margin: 0 0 0 110px;
+    padding: 0 0 0.5em 0;
+}
+

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="blog-app" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular: Controller scope Syntax</title>
+</head>
+<body ng-controller="blogCtrl">
+<h1>{{title}}</h1>
+<p>{{description}}</p>
+<div class="article" ng-repeat="article in articles">
+    <h2>{{article.title}}</h2>
+    <p>{{article.description}}</p>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+<script>
+    angular.module('blog-app',[])
+            .controller('blogCtrl', ['$scope', function ($scope) {
+                $scope.title = 'Blog Title';
+                $scope.description = 'about this blog';
+                $scope.articles = [
+                    {title:'title 1', description: 'description 1'},
+                    {title:'title 2', description: 'description 2'},
+                    {title:'title 3', description: 'description 3'},
+                    {title:'title 4', description: 'description 4'}
+                ];
+            }]);
+</script>
+</body>
+</html>

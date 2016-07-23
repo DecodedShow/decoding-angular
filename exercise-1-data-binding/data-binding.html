@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<h1>Tip Calculator</h1>
+<p>
+    <label for="bill">Bill: </label>
+    <input id="bill" type="number" placeholder="How much do you owe?" ng-model="bill">
+</p>
+<p>
+    <label for="tip">Tip Percent: </label>
+    <input id="tip" type="number" placeholder="Example .20 = 20%" ng-model="tip">
+</p>
+
+<p><strong>Tip Amount</strong> {{bill * tip | currency}}</p>
+<p><strong>Total</strong> {{bill + (bill * tip) | currency}}</p>
+
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+</body>
+</html>
