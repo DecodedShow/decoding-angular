@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" ng-app="product-app" ng-strict-di>
+<head>
+    <meta charset="UTF-8">
+    <title>Angular: Services</title>
+    <link rel="stylesheet" href="../assets/css/base.css">
+</head>
+<body ng-controller="productsCtrl as products">
+<h1>{{blog.title}}</h1>
+<p>{{blog.description}}</p>
+<div class="product" ng-repeat="product in products.list">
+    <h2>{{product.name}}</h2>
+    <h3>{{product.price}}</h3>
+    <p>{{product.description}}</p>
+    <button class="buy">Buy Now</button>
+</div>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="productsCtrl.js"></script>
+<script src="productsFactory.js"></script>
+</body>
+</html>
