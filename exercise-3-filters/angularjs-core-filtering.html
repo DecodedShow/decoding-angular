@@ -2,31 +2,31 @@
 <html lang="en" ng-app="loanTracker">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Decoding AngularJS: Filters</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/base.css">
 </head>
 <body ng-controller="loanCtrl as loanList">
-    <h1>{{loanList.title}}</h1>
-    <form>
-        <label for="search">Search Name</label>
-        <input type="search" id="search" ng-model="search.name">
-        <label for="paid">Paid</label>
-        <input type="radio" name="paidGroup" id="paid" value="true" ng-model="search.paid" />
-        <label for="unpaid">Unpaid</label>
-        <input type="radio"  name="paidGroup" id="unpaid" value="false" ng-model="search.paid" />
+<h1>{{loanList.title}}</h1>
+<form>
+    <label for="search">Search Name</label>
+    <input type="search" id="search" ng-model="">
+    <label for="paid">Paid</label>
+    <input type="radio" name="paidGroup" id="paid" value="true" ng-model="" />
+    <label for="unpaid">Unpaid</label>
+    <input type="radio"  name="paidGroup" id="unpaid" value="false" ng-model="" />
 
-    </form>
-    <ul class="loan-list">
-        <li ng-repeat="debtor in loanList.debtors | filter:search | limitTo:15">
-            <h2>{{debtor.name | uppercase}}</h2>
-            <dl>
-                <dt>Status</dt><dd>{{debtor.paid ? 'Paid' : 'Unpaid'}}</dd>
-                <dt>Amount</dt><dd>{{debtor.amount | currency}}</dd>
-                <dt>Date Loaned</dt><dd>{{debtor.loanDate | date: 'dd MMM yyyy'}}</dd>
-            </dl>
-        </li>
-    </ul>
+</form>
+<ul class="loan-list">
+    <li ng-repeat="debtor in loanList.debtors">
+        <h2>{{debtor.name}}</h2>
+        <dl>
+            <dt>Status</dt><dd>{{debtor.paid}}</dd>
+            <dt>Amount</dt><dd>{{debtor.amount}}</dd>
+            <dt>Date Loaned</dt><dd>{{debtor.loanDate}}</dd>
+        </dl>
+    </li>
+</ul>
 
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.0/angular.min.js"></script>
 <script>
@@ -65,7 +65,7 @@
             {name:'Ian Paice', loanDate: '2014-02-17T03:24:00', amount: '95.00', paid:true},
             {name:'Tomas Haake', loanDate: '1975-02-17T03:24:00', amount: '9999999', paid:false},
             {name:'Billy Cobham', loanDate: '1963-02-17T03:24:00', amount: '2', paid:false}
-        ];
+        ]
     }
 </script>
 </body>
