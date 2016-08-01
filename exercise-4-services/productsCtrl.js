@@ -4,9 +4,9 @@ angular.module('product-app')
 function productsCtrl (productsFactory) {
     var vm = this;
 
-    productsFactory.getProducts().then(function (resp) {
-        vm.list = resp.data;
+    productsFactory.getProducts().then(function (data) {
+        vm.list = data;
     });
-    vm.title = 'Blog Title';
-    vm.description = 'about this blog';
+    vm.title = 'Taco Tuesdays';
+    vm.description = "You can't just eat one!";
 }
