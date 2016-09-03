@@ -1,12 +1,10 @@
 angular.module('product-app')
-    .controller('productCtrl',['productsFactory', productCtrl]);
+    .controller('productCtrl',['$state','productsFactory', productCtrl]);
 
-function productCtrl (productsFactory) {
+function productCtrl ($state,productsFactory) {
     var vm = this;
-
-    productsFactory.getProducts().then(function (resp) {
-        vm.list = resp.data;
+    var currentProduct = $state.params.productId;
+    productsFactory.getProduct(currentProduct).then(function (resp) {
+        vm.detail = resp.data;
     });
-    vm.title = 'Blog Title';
-    vm.description = 'about this blog';
 }

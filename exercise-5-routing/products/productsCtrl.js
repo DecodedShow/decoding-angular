@@ -7,6 +7,6 @@ function productsCtrl (productsFactory) {
     productsFactory.getProducts().then(function (resp) {
         vm.list = resp.data;
     });
-    vm.title = 'Blog Title';
-    vm.description = 'about this blog';
+    vm.title = 'Taco Tuesdays';
+    vm.description = "You can't just eat one!";
 }
