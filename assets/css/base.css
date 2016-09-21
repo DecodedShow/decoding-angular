@@ -36,6 +36,13 @@ body{
     display: inline-block;
     padding: 30px;
 }
+.product h2{
+    color:red;
+}
+.product > a {
+    color:#666;
+    text-decoration: none;
+}
 .product .buy {
     border: none;
     padding: 10px 20px;
