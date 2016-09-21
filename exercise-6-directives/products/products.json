@@ -1,0 +1,26 @@
+[
+  {
+    "id":"001",
+    "name":"Taco",
+    "price":"2.99",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate fugit iure optio tempore. Deleniti eum laboriosam laborum quisquam vero."
+  },
+  {
+    "id":"002",
+    "name":"Burrito",
+    "price":"3.99",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate fugit iure optio tempore. Deleniti eum laboriosam laborum quisquam vero."
+  },
+  {
+    "id":"003",
+    "name":"Fajita",
+    "price":"4.99",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate fugit iure optio tempore. Deleniti eum laboriosam laborum quisquam vero."
+  },
+  {
+    "id":"004",
+    "name":"Quesadilla",
+    "price":"5.99",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate fugit iure optio tempore. Deleniti eum laboriosam laborum quisquam vero."
+  }
+]

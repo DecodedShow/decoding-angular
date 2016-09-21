@@ -1,0 +1,11 @@
+
+<h1>{{products.title}}</h1>
+<p>{{products.description}}</p>
+<div class="product" ng-repeat="product in products.list">
+    <a ui-sref="product-detail({productId : product.id})">
+        <h2>{{product.name}}</h2>
+        <h3>{{product.price}}</h3>
+        <p>{{product.description}}</p>
+    </a>
+    <button class="buy">Buy Now</button>
+</div>
