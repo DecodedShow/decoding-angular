@@ -49,3 +49,22 @@ body{
     background-color: red;
     color: white;
 }
+
+.slideshow  {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    height:300px;
+}
+.slideshow li {
+    position: absolute;
+    overflow: hidden;
+}
+.slideshow li p{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    padding-left:10px;
+    background: rgba(0,0,0,0.5);
+}

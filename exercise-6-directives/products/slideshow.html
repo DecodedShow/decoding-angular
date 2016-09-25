@@ -1,0 +1,14 @@
+<ul class="slideshow">
+    <li ng-repeat="slide in slides" ng-show="slide.visible">
+        <img ng-src="{{slide.img}}" alt="">
+        <p>{{slide.caption}}</p>
+    </li>
+</ul>
+<div class="arrows">
+    <a href="#" ng-click="prev()">
+        prev
+    </a>
+    <a href="#" ng-click="next()">
+        next
+    </a>
+</div>

@@ -1,12 +1,44 @@
 angular.module('product-app')
-	.directive('slideshow',slideshow);
+    .directive('slideShow', slideShow);
 
-function slideshow () {
-	var vm = this;
+function slideShow($timeout) {
+    var directive = {
+        templateUrl: 'products/slideshow.html',
+        scope: {
+            slides: '='
+        },
+        link: link
+    };
+    return directive;
 
-	productsFactory.getProducts().then(function (resp) {
-		vm.list = resp.data;
-	});
-	vm.title = 'Taco Tuesdays';
-	vm.description = "You can't just eat one!";
+    function link(scope) {
+        var timer;
+        var autoSlide = function () {
+            timer = $timeout(function () {
+                scope.next();
+                timer = $timeout(autoSlide, 2000);
+            }, 2000);
+        };
+
+        autoSlide();
+
+        scope.currentIndex = 0;
+        scope.next = function () {
+            scope.currentIndex < scope.slides.length - 1 ? scope.currentIndex++ : scope.currentIndex = 0;
+        };
+        scope.prev = function () {
+            scope.currentIndex > 0 ? scope.currentIndex-- : scope.currentIndex = scope.slides.length - 1;
+        };
+        scope.$watch('currentIndex', function () {
+            scope.slides.forEach(function (image) {
+                image.visible = false;
+            });
+            scope.slides[scope.currentIndex].visible = true;
+        });
+
+        scope.$on('$destroy', function () {
+            $timeout.cancel(timer);
+        });
+    }
+
 }
