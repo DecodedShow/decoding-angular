@@ -2,14 +2,13 @@ angular.module('product-app')
     .directive('slideShow', slideShow);
 
 function slideShow($timeout) {
-    var directive = {
+    return {
         templateUrl: 'products/slideshow.html',
         scope: {
             slides: '='
         },
         link: link
     };
-    return directive;
 
     function link(scope) {
         var timer;
