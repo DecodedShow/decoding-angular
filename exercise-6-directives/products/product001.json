@@ -2,5 +2,31 @@
     "id":"001",
     "name":"Taco",
     "price":"2.99",
+    "productImages": [
+        {
+            "img":"http://lorempixel.com/400/200/city",
+            "caption":"about this image"
+        },
+        {
+            "img":"http://lorempixel.com/400/200/food",
+            "caption":"about this image"
+        },
+        {
+            "img":"http://lorempixel.com/400/200/nature",
+            "caption":"about this image"
+        },
+        {
+            "img":"http://lorempixel.com/400/200/sports",
+            "caption":"about this image"
+        },
+        {
+            "img":"http://lorempixel.com/400/200/people",
+            "caption":"about this image"
+        },
+        {
+            "img":"http://lorempixel.com/400/200/",
+            "caption":"about this image"
+        }
+    ],
     "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet cupiditate fugit iure optio tempore. Deleniti eum laboriosam laborum quisquam vero."
 }

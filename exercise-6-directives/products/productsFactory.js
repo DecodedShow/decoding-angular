@@ -7,11 +7,11 @@ angular.module('product-app')
         };
 
         function getProduct(id) {
-            return $http.get('/decoding-angular/exercise-5-routing/products/product' + id + '.json');
+            return $http.get('/decoded/decoding-angular/exercise-6-directives/products/product' + id + '.json');
         }
         
         function getProducts() {
-            return $http.get('/decoding-angular/exercise-5-routing/products/products.json');
+            return $http.get('/decoded/decoding-angular/exercise-6-directives/products/products.json');
         }
         
         

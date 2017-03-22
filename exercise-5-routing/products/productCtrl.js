@@ -4,7 +4,7 @@ angular.module('product-app')
 function productCtrl ($state,productsFactory) {
     var vm = this;
     var currentProduct = $state.params.productId;
-    productsFactory.getProduct(currentProduct).then(function (resp) {
-        vm.detail = resp.data;
+    productsFactory.getProduct(currentProduct).then(function (data) {
+        vm.detail = data;
     });
 }
